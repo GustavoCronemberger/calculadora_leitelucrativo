@@ -1,3 +1,11 @@
+const imgLucro = '<img src="./assets/lucro.PNG" alt="Mascote Celebrando" />';
+const imgPrejuizo = '<img src="./assets/prejuizo.PNG" alt="Mascote Triste" />';
+const imgZero = '<img src="./assets/zero.PNG" alt="Mascote Confuso" />';
+
+const spanLucro = '<span class="resultado lucrativo">Lucrativo</span>';
+const spanPrejuizo = '<span class="resultado prejuizo">Prejuizo</span>';
+const spanZero = '<span class="resultado zero">Zero</span>';
+
 function formatCurrency(value) {
     // Remove qualquer caractere que não seja número
     value = value.replace(/\D/g, "");
@@ -61,67 +69,18 @@ document.getElementById('calculate').addEventListener('click', function() {
 
         const formattedTotal = total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         if (total > 0) {
-            totalElement.innerHTML = "R$ " + formattedTotal + " de lucro por litro de leite";
+            totalElement.innerHTML = imgLucro + " R$ " + formattedTotal + " de lucro por litro de leite";
             totalElement.style.color = 'rgb(107, 149, 255)';
         } else if (total < 0) {
-            totalElement.innerHTML = "R$ " + formattedTotal + " de prejuízo por litro de leite";
+            totalElement.innerHTML = imgPrejuizo + " R$ " + formattedTotal + " de prejuízo por litro de leite";
             totalElement.style.color = 'rgb(255, 90, 90)';
         } else {
-            totalElement.innerHTML = "R$ " + formattedTotal + " de lucro por litro de leite";
+            totalElement.innerHTML = imgZero + " R$ " + formattedTotal + " nenhum lucro por litro de leite";
             totalElement.style.color = '#e1e2e3';
         }
     }
 });
 
-
-
-/*document.getElementById('calculate').addEventListener('click', function() {
-    const credits = parseFloat(document.getElementById('credits').value);
-    const debits = parseFloat(document.getElementById('debits').value);
-    const price = parseFloat(document.getElementById('price').value);
-    const totalElement = document.getElementById('total');
-
-    const errorCredits = document.getElementById('error-message-credits');
-    const errorDebits = document.getElementById('error-message-debits');
-    const errorPrice = document.getElementById('error-message-price');
-
-    function validateNumber(value, errorElement, inputElement) {
-        if (isNaN(value) || value === '' || value < 0) {
-            errorElement.textContent = "Por favor, insira um número válido.";
-            inputElement.classList.add('error');
-            return false;
-        } else {
-            errorElement.textContent = "";
-            inputElement.classList.remove('error');
-            return true;
-        }
-    }
-
-    // Reseta o total e as classes de estilo
-    totalElement.innerHTML = "R$ 0,00";
-
-    // Validação dos campos
-    const isCreditsValid = validateNumber(credits, errorCredits, document.getElementById('credits'));
-    const isDebitsValid = validateNumber(debits, errorDebits, document.getElementById('debits'));
-    const isPriceValid = validateNumber(price, errorPrice, document.getElementById('price'));
-
-    // Se todos os campos forem válidos, faz o cálculo
-    if (isCreditsValid && isDebitsValid && isPriceValid) {
-        const total = (credits - debits) / (credits / price);
-
-        // Ajusta a cor com base no resultado
-        if (total > 0) {
-            totalElement.innerHTML = "R$ " + total.toFixed(2).replace('.', ',') + " de lucro por litro de leite";
-            totalElement.style.color = 'rgb(107, 149, 255)';
-        } else if(total < 0){
-            totalElement.innerHTML = "R$ " + total.toFixed(2).replace('.', ',') + " de prejuízo por litro de leite";
-            totalElement.style.color = 'rgb(255, 90, 90)';
-        } else{
-            totalElement.innerHTML = "R$ " + total.toFixed(2).replace('.', ',') + " de lucro por litro de leite";
-            totalElement.style.color = '#e1e2e3';
-        }
-    }
-});
 
 
 /*

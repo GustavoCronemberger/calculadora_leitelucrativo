@@ -32,7 +32,7 @@
 }
 
 #calculator h2 {
-    font-size: 30px;
+    font-size: 40px;
     position: relative;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .input_field label {
-    font-size: 15px;
+    font-size: 20px;
     color: #c9cbcd;
     font-weight: 500;
 }
@@ -90,13 +90,14 @@
 
 #total {
     font-size: 40px;
-    color: #e1e2e3
+    color: #e1e2e3;
+    font-weight: 600;
 }
 
-.total img {
+span img {
     vertical-align: middle;
-    height: 5px;
-    margin-right: 10px;
+    height: 120px;
+    margin: 2 2;
 }
 
 #calculate {
