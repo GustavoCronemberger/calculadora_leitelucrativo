@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <title>LeiteLucrativo</title>
+    
+</head>
+<body>
+    <main id="container">
+        <div id="calculator">
+            <h2>
+                Calculadora de Lucro do Leite
+            </h2>
+            <div id="input_box">
+                <div id="input_box">
+                    <div class="input_field">
+                        <label for="value">💰 Valor venda do leite mensal:</label>
+                        <input type="text" id="credits" placeholder="Ex: 1500" required>
+                        <span id="error-message-credits" class="error-message"></span>
+                    </div>
+                    <div class="input_field">
+                        <label for="debits">💸 Valor gastos mensais:</label>
+                        <input type="text" id="debits" placeholder="Ex: 1000" required>
+                        <span id="error-message-debits" class="error-message"></span>
+                    </div> 
+                    <div class="input_field">
+                        <label for="price">🥛 Preço do leite:</label>
+                        <input type="text" id="price" placeholder="Ex: 2,25" min= "0" step="0.01" required>
+                        <span id="error-message-price" class="error-message"></span>
+                    </div>  
+                <div id="result">
+                    <h4>Resultado:</h4>
+                        <span id="total">
+                            R$ 0,00
+                        </span>
+                </div>
+                <button id="calculate">
+                    Calcular
+                </button>                  
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
