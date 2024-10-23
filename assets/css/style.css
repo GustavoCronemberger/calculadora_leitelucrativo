@@ -9,6 +9,35 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+}
+
+body {
+    background: var(--linear-gradient);
+}
+
+header, footer {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+header li {
+    font-size: 16px;
+    list-style-type: none;
+}
+
+header li h1 {
+    font-size: 32px;
+}
+
+@keyframes fadeInAnimation{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 #container {
@@ -19,6 +48,8 @@
     justify-content: center;
     background: var(--linear-gradient);
     color: #e1e2e3;
+    opacity: 0;
+    animation: fadeInAnimation 3s forwards;
 }
 
 #calculator {
