@@ -70,10 +70,10 @@ document.getElementById('calculate').addEventListener('click', function() {
         const formattedTotal = total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         if (total > 0) {
             totalElement.innerHTML = imgLucro + " R$ " + formattedTotal + " de lucro por litro de leite";
-            totalElement.style.color = 'rgb(107, 149, 255)';
+            totalElement.style.color = 'rgb(163, 184, 255)';
         } else if (total < 0) {
             totalElement.innerHTML = imgPrejuizo + " R$ " + formattedTotal + " de prejuízo por litro de leite";
-            totalElement.style.color = 'rgb(255, 90, 90)';
+            totalElement.style.color = 'rgb(255, 176, 176)';
         } else {
             totalElement.innerHTML = imgZero + " R$ " + formattedTotal + " nenhum lucro por litro de leite";
             totalElement.style.color = '#e1e2e3';
