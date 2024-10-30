@@ -158,3 +158,29 @@ span img {
 #more_info a:hover {
     color: #cbd5e1;
 }
+
+@media screen and (max-width: 640px) {
+    #img {
+        display: none;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    #img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){}
