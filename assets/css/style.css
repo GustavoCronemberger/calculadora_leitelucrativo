@@ -9,7 +9,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+    font-size: 16px;
 }
 
 body {
@@ -26,13 +26,13 @@ header, footer {
     padding-bottom: 16px;
 }
 
-header li {
-    font-size: 16px;
-    list-style-type: none;
+header .titulo-dicas {
+    font-size: 1.5em;
+    margin-bottom: 8px;
 }
 
-header li h1 {
-    font-size: 32px;
+.texto-dicas p {
+    font-size: 1em;
 }
 
 @keyframes fadeInAnimation{
@@ -72,7 +72,7 @@ header li h1 {
     content: '';
     height: 3px;
     width: 150px;
-    background: var(--linear-gradient);
+    background: #A7CB28;
     bottom: 5px;
 }
 
@@ -97,7 +97,7 @@ header li h1 {
 .input_field input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #f5f5c0;
+    border-bottom: 1px solid #A7CB28;
     color: #fff;
     font-size: 20px;
     padding: 5px;
@@ -132,7 +132,7 @@ span img {
 }
 
 #calculate {
-    background: rgb(156, 162, 6);
+    background: #A7CB28;
     border: none;
     padding: 10px;
     color: #262626;
@@ -143,5 +143,5 @@ span img {
 }
 
 #calculate:hover {
-    background: #f0f09c;
+    background: #839f1f;
 }
