@@ -13,57 +13,50 @@
     
 </head>
 <body>
-    <header>
-        <div class="mascote-dicas">
-            <img src="./assets/frontcalculadora.PNG" alt="Mascote Apresentação">
-        </div>
-            <div class="texto-dicas"> 
-                <h1 class="titulo-dicas">Dicas:</h1>
-                <ul>
-                    <li>
-                        <p>Não coloque o valor da venda de animais: Vaca descarte, bezerros, etc.</p>
-                    </li>
-                    <li>
-                        <p>
-                            Não coloque em gastos mensais produtos ou animais que ficarão na propriedade por mais de 01 ano, isso se chama investimento!
-                        </p>
-                    </li>
-                </ul>
-        </div>
-    </header>
     <main id="container">
-        <div id="calculator">
-            <h2>
+        <section id="img">
+            <img src="./assets/frontcalculadora.PNG" alt="Produtor de Leite">
+        </section>    
+        <section id="calculator">        
+            <h2 id="title">
                 Calculadora de Lucro do Leite
             </h2>
-            <div id="input_box">
                 <div id="input_box">
-                    <div class="input_field">
-                        <label for="value">💰 Valor venda do leite mensal:</label>
-                        <input type="text" id="credits" placeholder="Ex: 1500" required>
-                        <span id="error-message-credits" class="error-message"></span>
-                    </div>
-                    <div class="input_field">
-                        <label for="debits">💸 Valor gastos mensais:</label>
-                        <input type="text" id="debits" placeholder="Ex: 1000" required>
-                        <span id="error-message-debits" class="error-message"></span>
-                    </div> 
-                    <div class="input_field">
-                        <label for="price">🥛 Preço do leite:</label>
-                        <input type="text" id="price" placeholder="Ex: 2,25" min= "0" step="0.01" required>
-                        <span id="error-message-price" class="error-message"></span>
-                    </div>  
-                <div id="result">
-                    <h4>Resultado:</h4>
-                        <span id="total">
-                            R$ 0,00
-                        </span>
+                    <div id="input_box">
+                        <div class="input_field">
+                            <label for="value">💰 Valor venda do leite mensal:</label>
+                            <input type="text" id="credits" placeholder="Ex: 1500" required>
+                            <span id="error-message-credits" class="error-message"></span>
+                        </div>
+                        <div class="input_field">
+                            <label for="debits">💸 Valor gasto mensal:</label>
+                            <input type="text" id="debits" placeholder="Ex: 1000" required>
+                            <span id="error-message-debits" class="error-message"></span>
+                        </div> 
+                        <div class="input_field">
+                            <label for="price">🥛 Preço do leite:</label>
+                            <input type="text" id="price" placeholder="Ex: 2,25" min= "0" step="0.01" required>
+                            <span id="error-message-price" class="error-message"></span>
+                        </div>  
+                    <button id="calculate">
+                        Calcular
+                    </button>                  
                 </div>
-                <button id="calculate">
-                    Calcular
-                </button>                  
             </div>
-        </div>  
+            <div id="infos">
+                <div id="result">
+                    <span id="total"></span>  
+                </div>
+                <div id="description">
+                    <span></span>
+                </div>
+            </div>
+            <div id="more_info">
+                <a href="https://ead.senar.org.br/senar-play/videos/custo-operacional-total-cot" target="_blank">
+                    Mais informações sobre Cálculos Financeiros ↗
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <strong> © Gustavo Cronemberger, Desenvolvedor Full Stack. 2024 Todos os direitos reservados.</strong>
