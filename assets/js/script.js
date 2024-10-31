@@ -7,11 +7,8 @@ const spanPrejuizo = '<span class="resultado prejuizo">Prejuizo</span>';
 const spanZero = '<span class="resultado zero">Zero</span>';
 
 function formatCurrency(value) {
-    // Remove qualquer caractere que não seja número
     value = value.replace(/\D/g, "");
-    // Adiciona vírgula para os dois últimos dígitos
     value = value.replace(/(\d)(\d{2})$/, "$1,$2");
-    // Adiciona pontos como separadores de milhar
     value = value.replace(/(?=(\d{3})+(\D))\B/g, ".");
     return value;
 }
@@ -95,29 +92,3 @@ document.getElementById('calculate').addEventListener('click', function() {
 
 
 
-/*
-Valor total de leite = valor venda de leite / preço do litro do leite;
-
-Lucro total = valor venda de leite - gastos mensais;
-
-Lucro por litro de leite = Lucro total / Valor total de leite;
-
-Obs: Produção Leite total mensal = valor recebido / preço litro do leite;
-
-Obs: Custo por Litro de Leite = Preço litro do leite - Lucro por litro de leite;
-
-Ideias:
-Nova janela: gerar mais conteúdo: lucro, custo, recomendação.
-
-Ícones Visuais: Adicionar mascote
-
-Instruções Simples: Incluir instruções curtas e claras acima de cada campo de entrada, como "Digite o valor da venda do leite".
-
-Botões Grandes: Aumentar o tamanho do botão "Calcular" para torná-lo mais visível e fácil de clicar.
-
-Feedback Visual: Usar cores ou animações para indicar quando um campo foi preenchido corretamente ou se há um erro.
-
-Texto de Ajuda: Adicionar texto de ajuda ou exemplos dentro dos campos de entrada que desaparecem quando o usuário começa a digitar, como "Ex: 1000" para "Valor venda do leite".
-
-Confirmação de Resultado: Talvez usar uma mensagem mais destacada para o resultado, como "Seu lucro é de: R$ X".
-*/
