@@ -34,7 +34,7 @@ body {
 
 #img img{
     width: 100%;
-    width: 30rem;
+    width: 32rem;
 }
 
 @keyframes fadeInAnimation{
@@ -114,7 +114,7 @@ body {
 }
 
 #total {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #e1e2e3;
     font-weight: 700;
 }
@@ -166,6 +166,11 @@ span img {
     color: #cbd5e1;
 }
 
+.hidden { 
+    transition: opacity 0.5s ease-out; 
+    opacity: 0; 
+}
+
 @media screen and (max-width: 640px) {
 
     body { 
@@ -184,31 +189,31 @@ span img {
         margin-bottom: 0.5rem;
     } 
     #calculator { 
-        width: 100%; 
+        width: 100%;
         padding: 0.75rem; 
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);; 
         margin-right: 0;
         margin-left: 0.5rem;
     } 
     #title { 
-        font-size: 1rem; 
+        font-size: 0.9rem; 
     } 
 
     #title::before {
-        width: 6.5rem;
+        width: 5.8rem;
     }
 
     #input_box label { 
-        font-size: 0.65rem; 
+        font-size: 0.6rem; 
     } 
     .input_field input { 
-        font-size: 0.65rem; 
+        font-size: 0.6rem; 
     } 
     #calculate { 
-        font-size: 0.8rem; 
+        font-size: 0.7rem; 
     } 
     #total { 
-        font-size: 0.7rem; 
+        font-size: 0.6rem; 
     } 
     #more_info a { 
         font-size: 0.45rem; 
@@ -228,7 +233,7 @@ span img {
     } 
     #img img { 
         max-width: 100%;
-        width: 23.5rem;
+        width: 28rem;
     } 
     #calculator { 
         max-width: 100%;
@@ -251,10 +256,10 @@ span img {
         font-size: 0.75rem; 
     } 
     #calculate { 
-        font-size: 0.65rem; 
+        font-size: 0.8rem; 
     }
     #total { 
-        font-size: 0.9rem; 
+        font-size: 1.2rem; 
     } 
     #more_info a { 
         font-size: 0.5rem; }

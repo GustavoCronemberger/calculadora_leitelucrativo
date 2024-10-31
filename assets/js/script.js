@@ -77,7 +77,19 @@ document.getElementById('calculate').addEventListener('click', function() {
             totalElement.style.color = '#e1e2e3';
         }
 
-        setTimeout(() => { document.getElementById('credits').value = ''; document.getElementById('debits').value = ''; document.getElementById('price').value = ''; }, 3000);
+        setTimeout(() => { 
+            document.getElementById('credits').classList.add('hidden'); 
+            document.getElementById('debits').classList.add('hidden'); 
+            document.getElementById('price').classList.add('hidden');
+            setTimeout(() => { 
+                document.getElementById('credits').value = ''; 
+                document.getElementById('debits').value = ''; 
+                document.getElementById('price').value = '';  
+                document.getElementById('credits').classList.remove('hidden'); 
+                document.getElementById('debits').classList.remove('hidden'); 
+                document.getElementById('price').classList.remove('hidden'); 
+            }, 150);
+        }, 3000);
     }
 });
 
