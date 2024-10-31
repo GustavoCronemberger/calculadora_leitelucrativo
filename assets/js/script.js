@@ -55,8 +55,6 @@ document.getElementById('calculate').addEventListener('click', function() {
         }
     }
 
-    totalElement.innerHTML = "R$ 0,00";
-
     const isCreditsValid = validateNumber(creditsInput, errorCredits, document.getElementById('credits'));
     const isDebitsValid = validateNumber(debitsInput, errorDebits, document.getElementById('debits'));
     const isPriceValid = validateNumber(priceInput, errorPrice, document.getElementById('price'));
@@ -78,6 +76,8 @@ document.getElementById('calculate').addEventListener('click', function() {
             totalElement.innerHTML = imgZero + " R$ " + formattedTotal + " nenhum lucro por litro de leite";
             totalElement.style.color = '#e1e2e3';
         }
+
+        setTimeout(() => { document.getElementById('credits').value = ''; document.getElementById('debits').value = ''; document.getElementById('price').value = ''; }, 3000);
     }
 });
 
