@@ -28,10 +28,13 @@ body {
     color: #e1e2e3;
     opacity: 0;
     animation: fadeInAnimation 3s forwards;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 #img img{
-    width: 62rem;
+    width: 100%;
+    width: 32rem;
 }
 
 @keyframes fadeInAnimation{
@@ -47,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-right: 10rem;
+    margin-right: 2rem;
 }
 
 #title {
@@ -210,9 +213,49 @@ span img {
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
-    #img {
-        display: none;
+    body { 
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px; 
+    } 
+    #container { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 1.5rem; 
+    } 
+    #img img { 
+        width: 90%;
+        height: auto; 
+        margin-bottom: 1rem; 
+    } 
+    #calculator { 
+        width: 90%; 
+        padding: 1.5rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+        margin-right: 0;
+    } 
+    #title { 
+        font-size: 2.2rem; 
+    } 
+    #title::before { 
+        width: 14rem; 
+    } 
+    #input_box label {
+        font-size: 1.4rem; 
+    } 
+    .input_field input { 
+        font-size: 1.2rem; 
+    } 
+    #calculate { 
+        font-size: 1.2rem; 
     }
+    #total { 
+        font-size: 2rem; 
+    } 
+    #more_info a { 
+        font-size: 0.85rem; }
 }
 
-@media screen and (min-width: 1024px){}
+@media screen and (min-width: 1024px) {
+    
+}
